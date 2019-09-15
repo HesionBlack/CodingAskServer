@@ -12,9 +12,11 @@ public interface IinvitationDao {
     @Insert("INSERT invitation ")
     public void pushInv(@Param("invitation") Invitation invitation);
 
-    @Select("SELECT id,title FROM invitation")
+    @Select("SELECT * FROM invitation")
     public List<Invitation> getInv();
-    @Select("SELECT title,content,releasetime FROM invitation WHERE id = #{id}")
-    public List<Invitation> getInvById(@Param("id") Long id);
+    @Select("SELECT * FROM invitation WHERE type = #{type}")
+    public List<Invitation> getInvByType(@Param("type") String type);
 
+    @Select("SELECT * FROM invitation WHERE id = #{id}")
+    List<Invitation> getInvdetialById(@Param("id") long id);
 }

@@ -25,9 +25,14 @@ public class InviationController {
         List<Invitation> inv = invitationService.getInv();
         return AjaxResponse.success(inv);
     }
-    @RequestMapping(value = "/inv/{id}",method = RequestMethod.GET,produces={"application/JSON"})
-    public AjaxResponse getInv(@PathVariable long id){
-        List<Invitation> inv = invitationService.getInvById(id);
+    @RequestMapping(value = "/inv/{Invtype}",method = RequestMethod.GET,produces={"application/JSON"})
+    public AjaxResponse getInv(@PathVariable String Invtype){
+        List<Invitation> inv = invitationService.getInvByType(Invtype);
+        return AjaxResponse.success(inv);
+    }
+    @RequestMapping(value = "/invdetail/{id}",method = RequestMethod.GET,produces={"application/JSON"})
+    public AjaxResponse getInvDetialByid(@PathVariable Long id){
+        List<Invitation> inv = invitationService.getInvdetilById(id);
         return AjaxResponse.success(inv);
     }
 

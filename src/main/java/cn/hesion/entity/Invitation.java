@@ -11,4 +11,5 @@ public class Invitation {
     private String content;
     private String imgurl;
     private Date releasetime;
+    private String author;
 }

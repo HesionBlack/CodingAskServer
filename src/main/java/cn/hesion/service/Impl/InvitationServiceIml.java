@@ -19,7 +19,12 @@ public class InvitationServiceIml implements IInvitationService {
     }
 
     @Override
-    public List<Invitation> getInvById(long id) {
-        return invitationDao.getInvById(id);
+    public List<Invitation> getInvByType(String type) {
+        return invitationDao.getInvByType(type);
+    }
+
+    @Override
+    public List<Invitation> getInvdetilById(long id) {
+        return invitationDao.getInvdetialById(id);
     }
 }

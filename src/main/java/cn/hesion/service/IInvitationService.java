@@ -7,5 +7,7 @@ import java.util.List;
 public interface IInvitationService {
     public List<Invitation> getInv();
 
-    List<Invitation> getInvById(long id);
+    List<Invitation> getInvByType(String type);
+
+    List<Invitation> getInvdetilById(long id);
 }
