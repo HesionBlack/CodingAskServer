@@ -10,4 +10,5 @@ public class User {
   private String username;
   private String password;
   private Date registertime;
+  private String avatarUrl;
 }
